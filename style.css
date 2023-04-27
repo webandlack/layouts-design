@@ -1,0 +1,55 @@
+/* General Styling */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-size: 1.125rem;
+    font-family: system-ui;
+    line-height: 1.5;
+}
+
+.wrapper {
+    width: min(100% - 2rem, 60rem);
+    margin-inline: auto;
+}
+
+
+
+/* Block One Even Columns */
+
+.even-columns__title {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+    margin: 0 1em;
+}
+
+@media (min-width: 39em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: #dfdfdf;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.others {
+    padding: 1em 3em;
+    background-color: #9a9999;
+}
